@@ -1,0 +1,268 @@
+.card-wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    align-content: space-between
+    width: 650px
+    margin-left: auto
+    margin-right: auto
+    
+.item-card
+    width: 315px
+    height: 164px
+    background-color: #e7e5e5
+    background: -webkit-gradient(linear, left top, left bottom, from(#e7e5e5), to(#a39f9f))
+    border-radius: 10px
+    margin-bottom: 22px
+
+
+.tabs
+    display: flex
+    justify-content: space-around
+    position: relative /* Относительное позиционирование */
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
+    padding-left: 12px
+    padding-right: 12px
+
+.tab-title
+    display: block /* Выстраиваем по горизонтали */
+
+.tab input[type="radio"]
+    display: none
+
+.tab-title
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 8px 5px /* Поля вокруг текста */
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
+    font-size: 8px
+    font-family: 'Museo Sans Cyrl 700'
+    cursor: pointer
+
+.tab-content
+    background: #ffffff /* Цвет фона */
+    position: absolute /* Абсолютное позиционирование */
+    left: 0 /* Размещаем у левого края */
+    width: 100% /* Ширина содержимого */
+    height: 138px 
+    display: none /* Прячем вкладку */
+    border-radius: 10px
+
+.tab :checked + .tab-title
+    position: relative /* Относительное позиционирование */
+    background: #1f2029 /* Цвет фона */
+    z-index: 1 /* Отображаем поверх содержимого */
+    color: #ffffff
+
+.tab :checked ~ .tab-content
+    display: block /* Показываем активную вкладку */
+
+.tab :checked + label:before
+    filter: invert(100%)
+
+label:before
+    margin-right: 2px
+
+.tab-icon-1:before
+    content: url(../img/video-icon.svg)
+
+.tab-icon-2::before
+    content: url(../img/photo-icon.svg)
+
+.tab-icon-3::before
+    content: url(../img/design-icon.svg)
+
+.tab-icon-4::before
+    content: url(../img/zamer-icon.svg)
+
+.tab-icon-5::before
+    content: url(../img/photo-before-icon.svg)
+
+.item-card .video-wrap
+    width: 50%
+
+.content-wrap
+    display: flex
+    justify-content: space-between
+
+.item-card .video-wrap
+    object-fit: cover
+    position: relative
+
+.video-icon-wrap
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 30px
+    height: 30px
+    border-radius: 30px
+    background-color: rgba(220,0,55, 0.5)
+    box-shadow: 0px 0px 0px 3px rgba(220,0,55, 0.2)
+    animation: play-button 4s linear infinite alternate
+
+
+.video-icon-wrap span
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 22px
+    height: 22px
+    border-radius: 35px
+    background-color:  #dc0037
+    transition: all 300ms ease
+
+.video-icon-wrap span:hover
+    transform: scale(1.1)
+    transition: all 300ms ease
+
+
+.video-icon-wrap span .play-icon
+    width: 8px
+    height: 8px
+    background-image: url(../img/play-icon.png)
+
+.content-wrap-text
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    width: 50%
+    padding-top: 15px
+    padding-bottom: 10px
+    padding-left: 14px
+    padding-right: 14px
+
+.text-title
+    color: #1f2029
+    font-size: 10px
+    font-family: 'Museo Sans Cyrl 700'
+
+.text-info 
+    color: #1f2029
+    font-size: 10px
+    font-family: 'Museo Sans Cyrl 500'
+
+.text-info span
+    margin-left: 15px
+
+.button 
+    width: 130px
+    height: 30px
+    padding-top: 11px
+    border-radius: 26px
+    background-color: #f01c44
+    background: -webkit-gradient(linear, left top, left bottom, from(#f01c44), to(#df0439))
+    font-size: 8px
+    text-align: center
+    color: #ffffff
+    text-transform: uppercase
+    text-decoration: none
+    font-family: 'Museo Sans Cyrl 900'
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.8)
+    box-shadow: 0 2px 0 rgba(0,0,0,0.5)
+    transition: all 200ms ease
+
+.button:active
+    box-shadow: 0 0 0 rgba(0,0,0,0.5)
+    transition: all 200ms ease
+
+.button:hover
+    background: -webkit-gradient(linear, left top, left bottom, from(#d61b3d), to(#c20736))
+    transition: all 400ms ease
+
+
+
+
+.img_el-3
+    position: absolute
+    right: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    margin-top: -35px
+
+.img_el-4
+    position: absolute
+    right: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    margin-top: 5px
+
+.gallery-wrap
+    margin: 0 -10px
+
+.section-2 .container
+    position: relative
+
+.slider-arrow 
+    position: absolute
+    display: flex
+    justify-content: space-between
+    width: 650px
+    bottom: 45%
+    align-items: center
+    z-index: 10
+    right: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.arrow
+    background-color: rgba(0,0,0,0.2)
+    border: none
+
+.arrow img
+    background-color: rgba(0,0,0,0.2)
+    padding: 5px
+
+.arrow-left
+    position: absolute
+    display: flex
+    justify-content: space-between
+    top: 57%
+    align-items: center
+    left: 0
+    bottom: 0
+    z-index: 10
+    transform: translateY(-50%)
+
+.arrow-right
+    position: absolute
+    display: flex
+    justify-content: space-between
+    top: 57%
+    align-items: center
+    right: 0
+    bottom: 0
+    z-index: 10
+    transform: translateY(-50%)
+
+.gallery-item
+    position: relative
+
+.gallery-item-text
+    position: absolute
+    color: #ffffff
+    font-family: 'Museo Sans Cyrl 500'
+    left: 15px
+    bottom: 10px
+    font-size: 9px
+    margin-right: 40px
+
+.overlayed
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #FFF
+    background: -webkit-gradient(linear, center bottom, center top, color-stop(0%, rgba(32,18,63,0.8)), color-stop(50%, rgba(32,18,63,0)))
+
+
+
