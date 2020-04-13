@@ -544,6 +544,10 @@ label:before {
   position: relative;
 }
 
+.section-2 .heading {
+  font-size: 22px;
+}
+
 .slider-arrow {
   position: absolute;
   display: -webkit-box;
